@@ -57,7 +57,18 @@ namespace LoginSystemApp.Controllers
         [HttpPost]
         public IActionResult SignUp(SignUpModel signUp)
         {
-            return View();
+            string message=dataAccess.SignUpCustomer(signUp);
+            if(!string.IsNullOrEmpty(message))
+            {
+                ViewBag.message = message;
+                return View();
+            }
+            else
+            {
+                ViewBag.message = "Something Wenr wrong!";
+                return View();
+            }
+            
         }
         public async Task<IActionResult> Logout()
         {

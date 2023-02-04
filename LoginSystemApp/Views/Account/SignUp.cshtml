@@ -17,7 +17,7 @@
                     <h4 class="card-title">SignUp here</h4>
                 </div>
                 <div class="card-body">
-                    <form asp-action="Sign" asp-controller="Account">
+                    <form asp-action="SignUp" asp-controller="Account">
                         <div class="row">
                             <div class="col-6">
                                 <div class="form-group">
@@ -93,6 +93,11 @@
                             <div class="col-12">
                                 <div class="form-group">
                                     <a asp-action="Login" asp-controller="Account">Already have account Login here</a>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="form-group">
+                                    <p class="text-info">@ViewBag.message</p>
                                 </div>
                             </div>
                         </div>
