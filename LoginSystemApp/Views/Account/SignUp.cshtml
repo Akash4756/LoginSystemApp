@@ -1,0 +1,106 @@
+﻿@{
+    Layout = null;
+}
+
+<html>
+<head>
+    <title></title>
+    <link href="~/lib/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
+    <script src="~/lib/jquery/dist/jquery.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.js"></script>
+</head>
+<body>
+    <div class="row">
+        <div class="col-8 offset-2 mt-5">
+            <div class="card">
+                <div class="card-header">
+                    <h4 class="card-title">SignUp here</h4>
+                </div>
+                <div class="card-body">
+                    <form asp-action="Sign" asp-controller="Account">
+                        <div class="row">
+                            <div class="col-6">
+                                <div class="form-group">
+                                    <label>Name</label>
+                                    <input type="text" name="Name" id="Name" class="form-control" />
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="form-group">
+                                    <label>Email Address</label>
+                                    <input type="text" name="Email" id="Email" class="form-control" />
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="form-group">
+                                    <label>Mobile Number</label>
+                                    <input type="text" name="Mobile" id="Mobile" class="form-control" />
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="form-group">
+                                    <label>Gender</label>
+                                    <select id="ddlGender" name="Gender" class="form-control">
+                                        <option value="">Select</option>
+                                        <option value="Male">Male</option>
+                                        <option value="Female">Female</option>
+                                        <option value="Other">Other</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="form-group">
+                                    <label>Your Password</label>
+                                    <input type="password" name="Password" id="Password" class="form-control" />
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="form-group">
+                                    <label>Confirm password</label>
+                                    <input type="password" name="CPassword" id="CPassword" class="form-control" />
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="form-group">
+                                    <label>Address 1</label>
+                                    <textarea name="Address1" id="Address1" class="form-control"></textarea>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="form-group">
+                                    <label>Address 2</label>
+                                    <textarea name="Address2" id="Address2" class="form-control"></textarea>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="form-group">
+                                    <label>Pin code</label>
+                                    <input type="number" name="Pin" id="Pin" class="form-control" />
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="form-group">
+                                    <label>IsActive</label>
+                                    <input type="text" name="IsActive" id="IsActive" class="form-control" />
+                                </div>
+                            </div>
+
+                            <div class="col-12">
+                                <div class="form-group">
+                                    <button type="submit" class="btn btn-success" id="btnSignUp">SignUp</button>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="form-group">
+                                    <a asp-action="Login" asp-controller="Account">Already have account Login here</a>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>                              
