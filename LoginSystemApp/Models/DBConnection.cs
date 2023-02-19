@@ -11,7 +11,7 @@ namespace LoginSystemApp.Models
         public SqlConnection connection;
         public DBConnection()
         {
-            connection = new SqlConnection("Data Source=LAPTOP-L4JP27VH;Initial Catalog=signUp;Integrated Security=True");
+            connection = new SqlConnection("Data Source=LAPTOP-L4JP27VH\\MSSQLSERVER01;Initial Catalog=LogsignUp;Integrated Security=True");
         }
     }
 }
