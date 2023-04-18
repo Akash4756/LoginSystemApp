@@ -65,7 +65,7 @@ namespace LoginSystemApp.Controllers
             }
             else
             {
-                ViewBag.message = "Something Wenr wrong!";
+                ViewBag.message = "Something Went wrong! ";
                 return View();
             }
             

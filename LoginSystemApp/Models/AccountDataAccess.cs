@@ -13,8 +13,7 @@ namespace LoginSystemApp.Models
         public string SignUpCustomer(SignUpModel sign)
         {
             string message = string.Empty;
-            SqlCommand command = new SqlCommand("sp_insert_customers" +
-                "", dB.connection);
+            SqlCommand command = new SqlCommand("sp_insert_customers", dB.connection);
             command.CommandType = System.Data.CommandType.StoredProcedure;
 
             command.Parameters.AddWithValue("@Name",sign.Name);
@@ -25,7 +24,7 @@ namespace LoginSystemApp.Models
             command.Parameters.AddWithValue("@Address1", sign.Address1);
             command.Parameters.AddWithValue("@Address2", sign.Address2);
             command.Parameters.AddWithValue("@Is_Active", sign.IsActive);
-            command.Parameters.AddWithValue("@Pincode", sign.Pin);
+            command.Parameters.AddWithValue("@Pincode", sign.Pincode);
 
             if (dB.connection.State == System.Data.ConnectionState.Closed)
             {
